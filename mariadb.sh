@@ -13,7 +13,7 @@ echo "Creating mysql user."
 mysqladmin -u root password qwerty
 mysql -uroot -pqwerty -e "CREATE DATABASE IF NOT EXISTS DAP;"
 mysql -uroot -pqwerty -e "GRANT ALL PRIVILEGES ON DAP.* TO 'dap'@'%' IDENTIFIED BY 'dap'; FLUSH PRIVILEGES;"
-#killall  mysqld
+killall  mysqld
 }
 
 # Call functions

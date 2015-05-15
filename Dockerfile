@@ -11,7 +11,6 @@ RUN yum -y update && yum clean all && \
 
 ADD ./mariadb.sh /mariadb.sh
 RUN chmod +x /mariadb.sh
-RUN /mariadb.sh
 ADD ./supervisord.conf /etc/supervisord.conf
 ADD ./start.sh /start.sh
 RUN chmod +x /start.sh
